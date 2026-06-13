@@ -2,47 +2,51 @@
 @section('title', 'Edit Kategori Artikel')
 @section('content')
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <h6 class="fw-semibold mb-0" style="color: #333333;">Edit Kategori
-            Artikel</h6>
-        <a href="{{ route('kategori.index') }}" class="btn btn-sm" style="background-color: #f0f0f0; color: #555555;">
-            Kembali
+        <h5 class="fw-bold mb-0" style="color: #2c3e50; letter-spacing: -0.5px;">Edit Kategori Artikel</h5>
+        <a href="{{ route('kategori.index') }}" class="btn btn-sm d-flex align-items-center gap-1 px-3 py-2" style="background-color: #f8f9fa; color: #4a5568; border: 1px solid #e2e8f0; border-radius: 8px; font-weight: 500; transition: all 0.2s ease;"
+            onmouseover="this.style.backgroundColor='#edf2f7'; this.style.transform='translateY(-1px)'"
+            onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.transform='translateY(0)'">
+            <i class="fa-solid fa-arrow-left"></i> Kembali
         </a>
     </div>
-    <div class="card border-0 shadow-sm">
+    <div class="card border-0" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); border: 1px solid rgba(0,0,0,0.04);">
         <div class="card-body p-4">
             <form action="{{ route('kategori.update', $kategori->id) }}" method="POST">
                 @csrf
                 @method('PUT')
                 <div class="mb-3">
-                    <label for="nama_kategori" class="form-label fw-semibold" style="font-size: 13px;">
+                    <label for="nama_kategori" class="form-label fw-semibold" style="font-size: 13px; color: #4a5568;">
                         Nama Kategori <span class="text-danger">*</span>
                     </label>
-                    <input type="text" class="form-control @error('nama_kategori') is-invalid
-@enderror"
+                    <input type="text" class="form-control @error('nama_kategori') is-invalid @enderror"
                         id="nama_kategori" name="nama_kategori" value="{{ old('nama_kategori', $kategori->nama_kategori) }}"
-                        placeholder="Masukkan nama kategori">
+                        placeholder="Masukkan nama kategori" style="border-radius: 8px; font-size: 13.5px; padding: 10px 14px;">
                     @error('nama_kategori')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="mb-4">
-                    <label for="keterangan" class="form-label fw-semibold" style="font-size: 13px;">
+                    <label for="keterangan" class="form-label fw-semibold" style="font-size: 13px; color: #4a5568;">
                         Keterangan
                     </label>
-                    <textarea class="form-control @error('keterangan') is-invalid
-@enderror" id="keterangan" name="keterangan"
-                        rows="4" placeholder="Masukkan keterangan kategori (opsional)">{{ old('keterangan', $kategori->keterangan) }}</textarea>
+                    <textarea class="form-control @error('keterangan') is-invalid @enderror" id="keterangan" name="keterangan"
+                        rows="4" placeholder="Masukkan keterangan kategori (opsional)" style="border-radius: 8px; font-size: 13.5px; padding: 10px 14px;">{{ old('keterangan', $kategori->keterangan) }}</textarea>
                     @error('keterangan')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="d-flex gap-2 justify-content-end">
-                    <a href="{{ route('kategori.index') }}" class="btn btn-sm"
-                        style="background-color: #f0f0f0; color: #555555;">
+                    <a href="{{ route('kategori.index') }}" class="btn btn-sm d-inline-flex align-items-center gap-1"
+                        style="background-color: #f8f9fa; color: #4a5568; border: 1px solid #e2e8f0; border-radius: 8px; padding: 8px 16px; font-weight: 500; transition: all 0.2s ease;"
+                        onmouseover="this.style.backgroundColor='#edf2f7'; this.style.transform='translateY(-1px)'"
+                        onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.transform='translateY(0)'">
                         Batal
                     </a>
-                    <button type="submit" class="btn btn-sm btn-success">
-                        Simpan Perubahan
+                    <button type="submit" class="btn btn-sm btn-success d-inline-flex align-items-center gap-1"
+                        style="border-radius: 8px; padding: 8px 16px; font-weight: 500; transition: all 0.2s ease;"
+                        onmouseover="this.style.transform='translateY(-1px)'"
+                        onmouseout="this.style.transform='translateY(0)'">
+                        <i class="fa-solid fa-floppy-disk"></i> Simpan Perubahan
                     </button>
                 </div>
             </form>

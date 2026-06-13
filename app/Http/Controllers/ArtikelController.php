@@ -13,7 +13,7 @@ class ArtikelController extends Controller
     {
         $artikel = Artikel::with('penulis', 'kategori')
             ->orderBy('id', 'desc')
-            ->get();
+            ->paginate(5);
 
         return view('artikel.index', compact('artikel'));
     }

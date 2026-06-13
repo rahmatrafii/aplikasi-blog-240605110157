@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\PenulisController;
 use App\Http\Controllers\KategoriArtikelController;
+use App\Http\Controllers\PengunjungController;
 // Route untuk halaman login
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'proses'])->name('login.proses')->middleware('guest');
@@ -17,7 +18,6 @@ Route::middleware('auth')->group(function () {
     Route::resource('penulis', PenulisController::class)->except(['show']);
     Route::resource('kategori', KategoriArtikelController::class)->except(['show']);
 });
-// Redirect halaman utama ke login
-Route::get('/', function () {
-    return redirect()->route('login');
-});
+// Route untuk halaman pengunjung (publik)
+Route::get('/', [PengunjungController::class, 'index'])->name('pengunjung.index');
+Route::get('/artikel/{id}', [PengunjungController::class, 'show'])->name('pengunjung.show');
