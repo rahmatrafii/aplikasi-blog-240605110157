@@ -5,9 +5,8 @@ Proyek ini merupakan aplikasi blog dinamis berbasis Laravel yang mengintegrasika
 ---
 
 ## 👤 Identitas Mahasiswa
-* **Nama Lengkap:** [Nama Lengkap Anda - Dummy Data]
-* **NIM:** [NIM Anda - Dummy Data]
-* **Mata Kuliah:** Praktikum Web Programming (UAS Modul 10)
+* **Nama Lengkap:** RAHMAT RAFI INDRAYANI
+* **NIM:** 240605110157
 
 ---
 
@@ -109,4 +108,4 @@ Setelah server berjalan, Anda dapat mengakses aplikasi di browser melalui alamat
 
 ## 🎥 Tautan Video Demonstrasi
 Berikut adalah rekaman video demonstrasi seluruh fitur aplikasi:
-* **Tautan YouTube:** [Tonton Video Demonstrasi Aplikasi di Sini (Dummy Link)](https://youtu.be/dummy-link-uas)
+* **Tautan YouTube:** [Tonton Video Demonstrasi Aplikasi di Sini](https://youtu.be/8-YtMWeDFO8?si=UnHxB3jsI8D-02Xf)
