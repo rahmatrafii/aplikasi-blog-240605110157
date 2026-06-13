@@ -45,8 +45,8 @@ Pastikan Anda sudah menginstal perangkat lunak berikut:
 ### 2. Kloning Repositori
 Buka terminal dan jalankan perintah berikut untuk mengkloning repositori ini:
 ```bash
-git clone [URL_REPOSITORI_GITHUB_DUMMY]
-cd aplikasi-kontak
+git clone https://github.com/rahmatrafii/aplikasi-blog-240605110157.git
+cd aplikasi-blog-240605110157
 ```
 
 ### 3. Instalasi Dependensi PHP
@@ -100,9 +100,7 @@ Jalankan server pengembangan lokal Laravel:
 ```bash
 php artisan serve
 ```
-Setelah server berjalan, Anda dapat mengakses aplikasi di browser melalui alamat:
-* Halaman Pengunjung: **[http://localhost:8000](http://localhost:8000)**
-* Halaman Login Admin: **[http://localhost:8000/login](http://localhost:8000/login)**
+Setelah server berjalan, Anda dapat mengakses aplikasi di browser melalui alamat yang diberikan
 
 ---
 
